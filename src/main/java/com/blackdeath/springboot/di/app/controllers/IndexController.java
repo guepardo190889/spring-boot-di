@@ -5,13 +5,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.blackdeath.springboot.di.app.models.services.MiServicio;
+import com.blackdeath.springboot.di.app.models.services.IServicio;
 
+/**
+ * 
+ * @author blackdeath
+ *
+ */
 @Controller
 public class IndexController {
 
 	@Autowired
-	private MiServicio servicio;
+	private IServicio servicio;
 
 	@GetMapping({ "/", "/index" })
 	public String index(Model model) {
